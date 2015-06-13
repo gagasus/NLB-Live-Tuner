@@ -47,7 +47,7 @@ namespace ServersDistribution.Realizations
         }
         public List<string> LogGetServerAddresses(string log)
         {
-            string pattern = @"(?:(?:-,\s))?(\d+\.\d+\.\d+\.\d+[:]\d+)";
+            string pattern = @"(?:(?:(-\s)(,\s)))?(\d+\.\d+\.\d+\.\d+[:]\d+)";
             return ResultsFromRegex(pattern, log);
         }
         public int GetServerNumber(string address)
